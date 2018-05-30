@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../bower_components/slick-carousel/slick/slick-theme.css"/>
     <link rel="stylesheet" href="user-style/style.css">
 </head>
 <body>
@@ -21,9 +23,9 @@
                             $ US <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="language">
-                            <li>zł PLN</li>
+                            <li>PLN</li>
                             <li>GBP</li>
-                            <li>GBP</li>
+                            <li>EUR</li>
                         </ul>
                     </li>
                     <li class="nav-tabs-account my-account">
@@ -276,14 +278,12 @@
         </div>
     </div>
     <div class="product-carousel">
-        <form style="display: none">
-            <select id='mySelect' class="form-control">
-                <option value='0'>Home</option>
-                <option value='1'>Profile</option>
-                <option value='2'>Messages</option>
-                <option value='3'>Settings</option>
-            </select>
-        </form>
+        <select id='mySelect' class="form-control select-tabs">
+            <option value='0'>What's Hot?</option>
+            <option value='1'>Designers</option>
+            <option value='2'>Featured</option>
+            <option value='3'>Latest</option>
+        </select>
         <div class="container">
             <div class="controller-slider-tabs">
                 <!-- Nav tabs -->
@@ -296,10 +296,10 @@
 
                 <!-- Controls -->
                 <div class="controls">
-                    <a class="left glyphicon glyphicon-menu-left btn btn" href="#carousel-example" data-slide="prev">
+                    <a class="left glyphicon glyphicon-menu-left btn btn" href="#prev" data-slide="prev">
                         <!--<img src="image/product-slider-arrow.png">-->
                     </a>
-                    <a class="right glyphicon glyphicon-menu-right" href="#carousel-example" data-slide="next">
+                    <a class="right glyphicon glyphicon-menu-right" href="#next" data-slide="next">
                         <!--<img src="image/product-slider-arrow.png">-->
                     </a>
                 </div>
@@ -307,392 +307,482 @@
         </div>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="hot">
-                <div id="carousel-example" class="carousel carousel-product slide" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="carousel-product">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
 
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="price">
+                                    <p> $76.95</p>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
+                            </div>
 
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="price">
+                                    <p> $76.95</p>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item sale-item">
-                                        <div class="photo">
-                                            <img src="image/product/product.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="sale-corner">
-                                            <p>sale</p>
-                                            <div class="rec">
-
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
                                 </div>
-                                <div class="col-md-2 col-sm-4 col-xs-4">
-                                    <div class="col-item">
-                                        <div class="photo">
-                                            <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
-                                            <div class="hover-action">
-                                                <button class="shop-it">
-                                                    <img src="image/product-buy.png" alt=""/>
-                                                    shop it
-                                                </button>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
 
-                                        <div class="info">
-                                            <div class="name-product">
-                                                <p>MIMOSA LACE DRESS</p>
-                                            </div>
-                                            <div class="price">
-                                                <p> $76.95</p>
-                                            </div>
-                                            <div class="action">
-                                                <button class="add-to-cart-btn">
-                                                    add to cart
-                                                    <img src="image/plus.png" alt="">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
+
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-mobile">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
+
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade in" id="designers"></div>
-            <div role="tabpanel" class="tab-pane fade in" id="featured">
+            <div role="tabpanel" class="tab-pane fade in" id="designers">
+                <div class="tab-mobile">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
 
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="featured">
+                <div class="tab-mobile">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
+
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="latest">
+                <div class="tab-mobile">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item sale-item">
+                            <div class="photo">
+                                <img src="image/product/product.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="sale-corner">
+                                <p>sale</p>
+                                <div class="rec">
 
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-item">
+                            <div class="photo">
+                                <img src="image/product/product-1.png" class="img-responsive" alt="a"/>
+                                <div class="hover-action">
+                                    <button class="shop-it">
+                                        <img src="image/product-buy.png" alt=""/>
+                                        shop it
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="name-product">
+                                    <p>MIMOSA LACE DRESS</p>
+                                </div>
+                                <div class="price">
+                                    <p> $76.95</p>
+                                </div>
+                                <div class="action">
+                                    <button class="add-to-cart-btn">
+                                        add to cart
+                                        <img src="image/plus.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-tabs">
+                <button class="black-action">
+                    load more
+                </button>
             </div>
         </div>
     </div>
@@ -1042,6 +1132,7 @@
 </footer>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bower_components/slick-carousel/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/js-user.js"></script>
 </body>
 </html>

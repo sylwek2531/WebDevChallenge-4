@@ -33,4 +33,40 @@ $(document).ready(function ()
     $('#mySelect').on('change', function (e) {
         $('#tabProduct li a').eq($(this).val()).tab('show');
     });
+    $('.carousel-product').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: $('.left'),
+        nextArrow: $('.right'),
+        responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 640,
+                settings:{
+                    // slidesToShow: 0
+                }
+            }
+
+
+        ]
+    });
 });
